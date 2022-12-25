@@ -20,7 +20,7 @@ const Description = () => {
           <div className="product__rating">
             {Array(theMovie.rating).fill().map((_i)=>(<p>⭐</p>))}
           </div>
-          <video src={theMovie.video}autoPlay loop/>
+          <iframe src={theMovie.video} title={theMovie.name} width="540" height="310"/>
     </div>
   )
 }
