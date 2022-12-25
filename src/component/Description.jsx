@@ -10,18 +10,17 @@ const Description = () => {
     console.log(theMovie)
 
   return (
-    <div>
+    <div className='desc'>
       <Link to ="/" >
       <BsFillArrowLeftCircleFill/> <span>go to Home</span>
       </Link>
         <h1>{theMovie.name}</h1>
           <img src={theMovie.image} alt={theMovie.name} />
-          {/*<p className='desc'>{props.description}</p>*/}
+          <p>{theMovie.description}</p>
           <div className="product__rating">
-                  {Array(theMovie.rating).fill().map((_i)=>(
-                    <p>⭐</p>
-                    ))}
-              </div>
+            {Array(theMovie.rating).fill().map((_i)=>(<p>⭐</p>))}
+          </div>
+          <video src={theMovie.video}autoPlay loop/>
     </div>
   )
 }
